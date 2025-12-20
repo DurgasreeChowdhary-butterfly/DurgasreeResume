@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durgasree Chowdhary - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 3px solid #2c5f8d;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .photo-container {
+            flex-shrink: 0;
+        }
+        
+        .photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid #2c5f8d;
+            background: #e0e0e0;
+        }
+        
+        .header-text {
+            flex-grow: 1;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c5f8d;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+            color: #444;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c5f8d;
+            text-transform: uppercase;
+            border-bottom: 2px solid #2c5f8d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .summary {
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .job-date {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .job-company {
+            font-size: 14px;
+            color: #2c5f8d;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .job-responsibilities {
+            margin-left: 20px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .job-responsibilities li {
+            margin-bottom: 6px;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 14px;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category-title {
+            font-weight: bold;
+            color: #2c5f8d;
+            margin-bottom: 4px;
+        }
+        
+        .skill-list {
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .project-item {
+            margin-bottom: 18px;
+        }
+        
+        .project-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 6px;
+        }
+        
+        .project-details {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        
+        .project-details li {
+            margin-bottom: 5px;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .institution {
+            font-size: 14px;
+            color: #2c5f8d;
+            font-weight: 600;
+        }
+        
+        .edu-details {
+            font-size: 13px;
+            color: #666;
+            margin-top: 3px;
+        }
+        
+        .certifications-list {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        
+        .certifications-list li {
+            margin-bottom: 6px;
+            color: #444;
+        }
+        
+        .languages {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .button-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .action-btn {
+            background: #2c5f8d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .action-btn:hover {
+            background: #1e4263;
+        }
+
+        .download-btn {
+            background: #28a745;
+        }
+
+        .download-btn:hover {
+            background: #218838;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-container {
+                padding: 20px;
+                max-width: 100%;
+                box-shadow: none;
+            }
+            .print-btn, .button-container {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 20px;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="action-btn download-btn" onclick="downloadHTML()">💾 Download HTML</button>
+        <button class="action-btn" onclick="window.print()">📄 Print/Save PDF</button>
+    </div>
+    
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="photo-container">
+                <img src="https://i.ibb.co/5h26k89F/linkedin-profile.jpg" class="photo" alt="Durgasree Chowdhary" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="photo" style="display: none; align-items: center; justify-content: center; color: #888; font-size: 12px; text-align: center; padding: 10px;">
+                    Photo Loading...
+                </div>
+            </div>
+            <div class="header-text">
+                <div class="name">KOMMINI DURGASREE CHOWDHARY</div>
+                <div class="title">Software Engineer | Data Science & AI Applications | 2+ Years Experience | Open to Dubai</div>
+                <div class="contact-info">
+                    <div class="contact-item">📞 +91 7981191034</div>
+                    <div class="contact-item">✉️ <a href="mailto:kdurgasree28@gmail.com" style="color: #2c5f8d; text-decoration: none;">kdurgasree28@gmail.com</a></div>
+                    <div class="contact-item">📍 Chennai, India</div>
+                    <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/durgasreek" style="color: #2c5f8d; text-decoration: none;">linkedin.com/in/durgasreek</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">PROFESSIONAL SUMMARY</div>
+            <div class="summary">
+                Results-driven Software Engineer with 2+ years of comprehensive experience in enterprise banking systems, full-stack development, and data science applications. Currently employed at Hitachi Payment Services, specializing in ATM monitoring and payment systems for the banking domain. Proven track record in delivering CRM platforms, e-commerce solutions, and AI-powered applications. Expertise in ASP.NET, Python, SQL Server, and Machine Learning, with hands-on experience in building scalable applications from concept to deployment. Seeking challenging opportunities in Dubai's dynamic technology sector to leverage technical skills and contribute to innovative digital transformation initiatives.
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Trainee Software Engineer</div>
+                    <div class="job-date">July 2024 – Present</div>
+                </div>
+                <div class="job-company">Hitachi Payment Services — Chennai, India</div>
+                <ul class="job-responsibilities">
+                    <li>Developing and maintaining enterprise-grade ATM monitoring applications using ASP.NET Web Forms and MVC framework, serving multiple banking clients across India</li>
+                    <li>Implementing real-time monitoring dashboards for ATM status tracking, transaction processing, and system health alerts, reducing downtime by 25%</li>
+                    <li>Architected role-based access control (RBAC) systems with multi-level approval workflows and comprehensive audit trails for enhanced security compliance</li>
+                    <li>Optimized SQL Server database performance through stored procedures, indexing strategies, and query optimization, improving response times by 40%</li>
+                    <li>Collaborated with cross-functional teams to deliver mission-critical features for the banking and payments domain, ensuring 99.9% system uptime</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Freelance Software Developer</div>
+                    <div class="job-date">January 2024 – Present</div>
+                </div>
+                <div class="job-company">Independent / Remote</div>
+                <ul class="job-responsibilities">
+                    <li>Designed and delivered 5+ production-ready applications including CRM systems, e-commerce platforms, and food delivery applications for diverse clients</li>
+                    <li>Built comprehensive CRM solution with role management, interactive dashboards, customer analytics, and automated reporting features, improving client sales tracking efficiency by 35%</li>
+                    <li>Developed full-featured e-commerce platform with product catalog management, shopping cart, secure payment integration, and order tracking system</li>
+                    <li>Created restaurant food delivery application with menu management, real-time cart updates, order processing, and admin control panel</li>
+                    <li>Implemented RESTful APIs using Flask and ASP.NET for scalable backend architecture, handling 1000+ concurrent users</li>
+                    <li>Applied data analytics and machine learning techniques to analyze sales patterns, customer behavior, and generate actionable business insights</li>
+                    <li>Managed complete project lifecycle from requirement gathering, system design, development, testing, to deployment and client training</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">TECHNICAL SKILLS</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Programming Languages:</div>
+                    <div class="skill-list">Python, C#, JavaScript, SQL, T-SQL</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Web Development:</div>
+                    <div class="skill-list">ASP.NET Web Forms, ASP.NET MVC, Flask, REST APIs, HTML5, CSS3, Bootstrap, jQuery</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Data Science & ML:</div>
+                    <div class="skill-list">Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Data Cleaning, EDA, Feature Engineering</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Deep Learning & NLP:</div>
+                    <div class="skill-list">Neural Networks, CNN, Transfer Learning, Text Preprocessing, Tokenization, Classification</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Databases:</div>
+                    <div class="skill-list">SQL Server, PostgreSQL, Firebase, Database Design, Query Optimization, Stored Procedures</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Tools & Technologies:</div>
+                    <div class="skill-list">Git, GitHub, Jupyter Notebook, Visual Studio, VS Code, Power BI, Postman</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">KEY PROJECTS</div>
+            
+            <div class="project-item">
+                <div class="project-title">Sports Personality Image Classification System</div>
+                <ul class="project-details">
+                    <li>Developed multi-class image classification system using OpenCV and Scikit-learn to identify 30 sports personalities</li>
+                    <li>Achieved 92% classification accuracy through advanced feature extraction and model optimization techniques</li>
+                    <li>Improved processing speed by 35% through algorithm optimization and efficient image preprocessing pipelines</li>
+                    <li>Technologies: Python, OpenCV, Scikit-learn, NumPy, Matplotlib</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Real-Time Face Attendance System</div>
+                <ul class="project-details">
+                    <li>Built facial recognition-based attendance management system supporting 50+ concurrent users</li>
+                    <li>Achieved 95% recognition accuracy using Python, Flask, and OpenCV with real-time image processing</li>
+                    <li>Reduced manual attendance processing time by 30% and eliminated buddy-punching incidents</li>
+                    <li>Implemented user-friendly web interface with attendance reports, analytics dashboard, and CSV export functionality</li>
+                    <li>Technologies: Python, Flask, OpenCV, Face Recognition Library, SQLite</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Machine Learning & NLP Applications (Portfolio)</div>
+                <ul class="project-details">
+                    <li>Implemented end-to-end ML pipelines covering data preprocessing, model training, evaluation, and deployment</li>
+                    <li>Worked on classification and regression problems using various algorithms (Logistic Regression, Random Forest, SVM, XGBoost)</li>
+                    <li>Developed NLP-based text analysis applications including sentiment analysis and text classification</li>
+                    <li>Applied statistical analysis and data visualization techniques to derive actionable business insights</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">EDUCATION</div>
+            
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology in Computer Science & Engineering</div>
+                <div class="institution">KL University</div>
+                <div class="edu-details">Specialization: Big Data Analytics & Data Science | Year: 2025 | CGPA: 9.1/10</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Diploma in Computer Engineering</div>
+                <div class="institution">Sree Vidyanikethan Engineering College</div>
+                <div class="edu-details">CGPA: 9.1/10</div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <div class="section-title">CERTIFICATIONS</div>
+            <ul class="certifications-list">
+                <li>Complete Data Science, Machine Learning, Deep Learning & NLP Bootcamp — Udemy</li>
+                <li>Microsoft Azure Fundamentals (AZ-900)</li>
+                <li>Microsoft AI Fundamentals (AI-900)</li>
+                <li>Salesforce Certified AI Associate</li>
+            </ul>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <div class="section-title">LANGUAGES</div>
+            <div class="languages">
+                <strong>Telugu:</strong> Native | <strong>English:</strong> Fluent (Professional Working Proficiency) | <strong>Hindi:</strong> Conversational
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Download HTML file
+        function downloadHTML() {
+            const content = document.documentElement.outerHTML;
+            const blob = new Blob([content], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Durgasree_Chowdhary_Resume.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            alert('HTML file downloaded! You can open it in any browser and use Ctrl+P (Cmd+P on Mac) to save as PDF.');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Resume loaded successfully');
+            
+            // Add helpful instructions
+            setTimeout(() => {
+                if (confirm('Welcome! Would you like to see instructions for saving this resume?')) {
+                    alert('HOW TO SAVE YOUR RESUME:\n\n1. Click "💾 Download HTML" to save the file\n2. Open the downloaded HTML file in your browser\n3. Press Ctrl+P (Windows) or Cmd+P (Mac)\n4. Choose "Save as PDF"\n5. Save it!\n\nOR simply click "📄 Print/Save PDF" button now!');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
